@@ -1,0 +1,18 @@
+name of the file with background (UTF8)
+number of paths(int)
+list of paths [
+	number of points forming the path(int)
+	list of points(pairs of ints)
+	path width (int)
+]
+number of misc shapes(int)
+misc shapes params(four ints)
+number of waves
+list of waves [
+	nr of params(int)
+	list of params [
+		delay(int)
+		path index(int)
+		type(string)
+	]
+]

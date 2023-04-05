@@ -1,0 +1,19 @@
+sourceCompatibility = 16
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.+'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.+'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+sourceSets.main.java.srcDirs = [ "src/main" ]
+sourceSets.test.java.srcDirs = [ "src/test"]
